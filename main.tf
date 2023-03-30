@@ -1,3 +1,12 @@
-locals {
-  pr = 10
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
 }
+
+provider "aws" {}
+
+data "aws_region" "default" {}
