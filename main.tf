@@ -1,1 +1,3 @@
-locals {}
+locals {
+  pr = 8
+}
