@@ -1,3 +1,3 @@
 locals {
-  pr = 9
+  pr = 10
 }
