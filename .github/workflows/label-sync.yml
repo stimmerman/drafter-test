@@ -3,15 +3,17 @@ on:
   push:
     branches:
       - main
-    paths:
-      - .github/labels.yml
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: micnncim/action-label-syncer@v1
+      - name: ↩️ Checkout
+        uses: actions/checkout@v2
+
+      - name: 🔁 Sync labels
+        uses: micnncim/action-label-syncer@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          repository: ${{ github.repository }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          manifest: .github/labels.yml
