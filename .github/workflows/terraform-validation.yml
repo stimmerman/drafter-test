@@ -139,7 +139,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run Checkov
-        uses: bridgecrewio/checkov-action@v12.2248.0 # checkov-action v12.2150.0 == checkov 2.3.34 - Keep this config in sync with .pre-commit-config.yaml
+        uses: bridgecrewio/checkov-action@v12.2150.0
         with:
           container_user: 1000
           directory: "/"
