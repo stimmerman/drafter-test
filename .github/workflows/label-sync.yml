@@ -3,17 +3,19 @@ on:
   push:
     branches:
       - main
+    paths:
+      - .github/labels.yml
+      - .github/workflows/label-sync.yml
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: ↩️ Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: 🔁 Sync labels
-        uses: micnncim/action-label-syncer@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: crazy-max/ghaction-github-labeler@v4
         with:
-          manifest: .github/labels.yml
+          skip-delete: false
+          dry-run: false
