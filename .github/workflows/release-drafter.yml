@@ -6,7 +6,10 @@ on:
       - master
       - main
     paths-ignore:
-      - 'CHANGELOG.md'
+      - .github
+      - .pre-commit-config.yaml
+      - CHANGELOG.md
+      - LICENSE
   workflow_dispatch:      
 
 permissions:
