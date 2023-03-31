@@ -1,4 +1,4 @@
-name: "release-drafter"
+name: "release-drafter-synctest"
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
       - main
     paths-ignore:
-      - .github
+      - .github/**
       - .pre-commit-config.yaml
       - CHANGELOG.md
       - LICENSE
