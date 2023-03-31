@@ -4,7 +4,7 @@ version-template: '$MAJOR.$MINOR.$PATCH'
 change-title-escapes: '\<*_&'
 
 categories:
-  - title: '🚀 Features'
+  - title: '🚀 Features-synctest'
     labels:
       - 'breaking'
       - 'enhancement'

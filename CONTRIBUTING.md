@@ -1,4 +1,4 @@
-# Contributing-test5
+# Contributing
 
 ## Coding Guidelines
 
