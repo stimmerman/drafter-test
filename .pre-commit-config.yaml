@@ -23,7 +23,7 @@ repos:
       - id: terraform_docs
       - id: terraform_validate
   - repo: https://github.com/bridgecrewio/checkov.git
-    rev: 2.3.34
+    rev: 2.3.141
     hooks:
       - id: checkov
         verbose: false
