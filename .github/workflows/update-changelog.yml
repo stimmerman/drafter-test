@@ -1,4 +1,4 @@
-name: "update-changelog"
+name: "update-changelog-test5"
 
 on:
   release:
