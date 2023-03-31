@@ -1,5 +1,5 @@
 ---
-- name: breaking-test
+- name: breaking
   color: "#B60205"
   description: This change is not backwards compatible
 - name: bug
