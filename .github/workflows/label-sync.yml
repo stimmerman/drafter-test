@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: ↩️ Checkout
         uses: actions/checkout@v3
@@ -17,5 +19,6 @@ jobs:
       - name: 🔁 Sync labels
         uses: crazy-max/ghaction-github-labeler@v4
         with:
-          skip-delete: false
           dry-run: false
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          skip-delete: false
