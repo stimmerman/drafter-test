@@ -1,21 +1,17 @@
-name: Create Default Labels
-
+name: Sync labels
 on:
   push:
     branches:
       - master
-      - main
     paths:
-      - .github/labels.json
-
+      - .github/labels.yaml
 jobs:
-  labels:
-    name: DefaultLabelsActions
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@1.0.0
-      - uses: lannonbr/issue-label-manager-action@3.0.0
+      - uses: actions/checkout@v2
+      - uses: micnncim/action-label-syncer@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          delete: true
+          manifest: .github/labels.yaml
