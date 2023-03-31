@@ -1,4 +1,4 @@
-name: Sync labels
+name: label-synchronization
 on:
   push:
     branches:
